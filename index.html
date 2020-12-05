@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Urbain</title>
-<!-- MDB icon -->
-<link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-<!-- Google Fonts Roboto -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="css/mdb.min.css">
-<!-- Your custom styles (optional) -->
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Urbain</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Owl Carousel Theme -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Owl Carousel Theme Default -->
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- Slick Slider Theme CSS -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- Project Starts From Here -->
@@ -155,14 +163,568 @@
                 <div class="col-lg-12 text-center">
                     <h1>
                         Travel like an explorer.<br>
-                        <em>Stay like a local.</em>
+                        Stay like a local.
                     </h1>
+                </div>
+                <div class="col-lg-12 hero-caption">
+                    <div class="row">
+                        <div class="col-lg-3 offset-lg-9">
+                            <p>Cozy loft Apartment</p>
+                            <span>New York City, NY</span>
+                            <a href="#">RENT THIS Home <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="dummy-section bg-primary d-block w-100" style="height: 100vh;"></section>
+<section class="filter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="filter-container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <button type="button" id="location_triger" class="location_triger" name="button">
+                                <i class="fas fa-map-marker-alt location_icon"></i>
+                                Location
+                                <i class="fas fa-chevron-down dropdown_icon"></i>
+                            </button>
+                        </div>
+                        <div class="col-lg-4 checkin-checkout">
+                            <button type="button" class="date_picker" id="date_picker" name="button">
+                                <span><i class="fas fa-calendar"></i> Check-in</span>
+                                -
+                                <span><i class="fas fa-calendar"></i> Check-out</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-3">
+                            <button type="button" class="location_triger guests_trigger" id="guests_trigger" name="button">
+                                <i class="fas fa-user-friends location_icon"></i>
+                                Guests
+                                <i class="fas fa-chevron-down dropdown_icon"></i>
+                            </button>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="#" class="search-btn">Search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-options-container">
+                    <div class="location-dropdown-container">
+                        <ul>
+                            <li><button data-value="new-york-city">New York City</button></li>
+                            <li><button data-value="London">London</button></li>
+                            <li><button data-value="paris">Paris</button></li>
+                            <li><button data-value="harrogate">Harrogate</button></li>
+                            <li><button data-value="new-york-city">New York City</button></li>
+                            <li><button data-value="London">London</button></li>
+                            <li><button data-value="paris">Paris</button></li>
+                            <li><button data-value="harrogate">Harrogate</button></li>
+                        </ul>
+                    </div>
+                    <div class="checkin-checkout-calendar">
+                        <div class="row">
+                            <div class="col-lg-7 offset-lg-2">
+                                <div class="p-5 bg-danger"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guests-dropdown-container">
+                        <div class="row">
+                            <div class="col-lg-3 offset-lg-7 p-0">
+                                <div class="guests_counter">
+                                    <ul>
+                                        <li>
+                                            <div class="guests-box">
+                                                <p>Adults</p>
+                                                <div class="def-number-input number-input safari_only">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i class="fas fa-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="guests-box">
+                                                <p>Children</p>
+                                                <div class="def-number-input number-input safari_only">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"><i class="fas fa-minus"></i></button>
+                                                    <input class="quantity" min="0" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="after-filter-tags text-center">
+                    <ul class="list-unstyled m-0 p-0">
+                        <li class="list-inline-item"><h4>Really. Clean.</h4></li>
+                        <li class="list-inline-item"><h4>Really. Nice.</h4></li>
+                        <li class="list-inline-item"><h4>Really. Real.</h4></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery-section bg-image" data-image="img/gallery.jpg">
+    <img src="img/gallery.jpg" alt="Gallery Background Image" />
+    <div class="gallery-section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="gallery-content-box">
+                        <div class="gallery-content-box-heading">
+                            <h3>
+                                <em>Discovering </em><br>the unknown is the reason that we travel.
+                            </h3>
+                        </div>
+                        <div class="gallery-content-box-description">
+                            <p>
+                                Discovering the unknown is the reason that we travel. It's why we feel butterflies when we pack a suitcase,
+                                because there's a chance we're about to see something beautiful, meet someone special, or taste something
+                                incredible. We love the unknown—except when it comes to where we sleep.
+                            </p>
+                            <p>
+                                At Urbain, the unknowns are adventures to discover outside in the city, not secrets to uncover inside your
+                                apartment. Wherever your travels take you, you’ll always find the same great quality, comfort, hospitality
+                                and safety standards, thanks to our professional, self-catering management service:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="carousel-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center slider-heading">
+                <h2>Live like a local</h2>
+                <select class="city_list_for_slider" name="city_list_for_slider">
+                    <option value="london">London</option>
+                    <option value="london">Manchester</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="slider-category">
+        <div class="category-slider owl-carousel owl-theme">
+            <div class="item"><a class="category-link-item" href="#richmond">Richmond</a></div>
+            <div class="item"><a class="category-link-item" href="#wood_green">Wood Green</a></div>
+            <div class="item"><a class="category-link-item" href="#harrow">Harrow</a></div>
+            <div class="item"><a class="category-link-item" href="#sutten">Sutten</a></div>
+            <div class="item"><a class="category-link-item" href="#knightsbridge">Knightsbridge</a></div>
+            <div class="item"><a class="category-link-item" href="#place_one">Place two</a></div>
+            <div class="item"><a class="category-link-item" href="#place_three">Place three</a></div>
+        </div>
+    </div>
+    <div class="hotels-slider-section">
+        <div class="hotels-slider owl-carousel owl-theme">
+            <div class="item" data-hash="richmond">
+                <div class="hotel-tag">
+                    <div class="hotel-tag-inner">
+                        <img src="img/veeve.png" alt="">
+                    </div>
+                </div>
+                <div class="hotel-inner">
+                    <div><img src="img/g1.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g2.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g3.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g4.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked ">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="wood_green">
+                <div class="hotel-inner">
+                    <div><img src="img/g2.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g3.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g4.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g5.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked ">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="harrow">
+                <div class="hotel-inner">
+                    <div><img src="img/g3.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g4.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g5.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g6.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="sutten">
+                <div class="hotel-inner">
+                    <div><img src="img/g4.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g5.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g6.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g7.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="place_one">
+                <div class="hotel-inner">
+                    <div><img src="img/g5.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g6.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g7.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g8.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-hash="place_three">
+                <div class="hotel-inner">
+                    <div><img src="img/g6.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g7.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g8.jpg" class="img-fluid" /></div>
+                    <div><img src="img/g9.jpg" class="img-fluid" /></div>
+                </div>
+                <div class="hotel-meta">
+                    <div class="wishlist-icon">
+                        <a href="#">
+                            <span class="unlike">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                            <span class="liked active">
+                                <i class="far fa-heart border-icon"></i>
+                                <i class="fas fa-heart fill-icon"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hotel-meta-inner">
+                        <span>Richmond, London</span>
+                        <h3>Leafy London Luxury</h3>
+                    </div>
+                    <div class="hotel-meta-price">
+                        <p>from <strong>$245</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading text-center">
+                    <h2>Only the finest<br>homes are chosen</h2>
+                    <p>And only the best meet Urbain's exacting standards.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row features-row">
+            <div class="col-lg-2 offset-lg-1 text-center">
+                <img src="img/i1.jpg" alt="" />
+                <p>Look like a local</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <img src="img/i2.jpg" alt="" />
+                <p>Stay with confidence</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <img src="img/i3.jpg" alt="" />
+                <p>Cutting-edge comfort</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <img src="img/i4.jpg" alt="" />
+                <p>Responsive travel</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <img src="img/i5.jpg" alt="" />
+                <p>A phone call away</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="blog-heading-area">
+                    <div class="section-heading">
+                        <h2>Urbain<br>Explorer’s<br>Journal</h2>
+                        <a href="#">View all journal entries</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="blog-box bg-image" data-image="img/b1.png">
+                    <div class="blog-box-meta">
+                        <div class="blog-box-date">
+                            <span>November 11th, 2020</span>
+                        </div>
+                        <div class="blog-box-title">
+                            <h3>
+                                Top London Spots<br>
+                                for Spot to Run<br>
+                                Around Freely<br>
+                                (and Safely)
+                            </h3>
+                        </div>
+                        <div class="blog-box-cta">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="blog-box bg-image" data-image="img/b2.png">
+                    <div class="blog-box-meta">
+                        <div class="blog-box-date">
+                            <span>November 21th, 2020</span>
+                        </div>
+                        <div class="blog-box-title">
+                            <h3>
+                                City Guide:<br>
+                                Austin
+                            </h3>
+                        </div>
+                        <div class="blog-box-cta">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="blog-box bg-image" data-image="img/b3.png">
+                    <div class="blog-box-meta">
+                        <div class="blog-box-date">
+                            <span>November 13th, 2020</span>
+                        </div>
+                        <div class="blog-box-title">
+                            <h3>
+                                City guide:<br>
+                                London
+                            </h3>
+                        </div>
+                        <div class="blog-box-cta">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="rating-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="rating-heading text-center">
+                    <ul>
+                        <li><h3>Average Customer Rating: </h3></li>
+                        <li>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </li>
+                        <li><strong>4.3/5</strong></li>
+                        <li><img src="img/feefo.png" alt="feefo" /></li>
+                    </ul>
+                    <p><strong>Independent Service Rating</strong> Based on <strong>236,874</strong> verified reviews, Read all reviews</p>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="review-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review-box">
+                            <div class="review-box-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Love this site"</h3>
+                            <p>Booked threw Expedia a lot never had a problem always good deals even on ...</p>
+                            <span>John Smith - 2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="container">
         <div class="row">
@@ -229,6 +791,56 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Owl Carousel JS -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<!-- Slick JS -->
+<script type="text/javascript" src="js/slick.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        $('.category-slider').owlCarousel({
+            items:6,
+            loop:false,
+            center:true,
+            margin:10,
+            URLhashListener:true,
+            autoplayHoverPause:true,
+            startPosition: 'URLHash',
+            dots: false
+        });
+        $('.hotels-slider').owlCarousel({
+            stagePadding: 200,
+            loop:true,
+            margin:15,
+            nav:true,
+            navText: ["<img src='img/prev.png'>","<img src='img/next.png'>"],
+            dots: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:2
+                }
+            }
+        });
+        $('.hotel-inner').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+        $('.review-slider').owlCarousel({
+            items:4,
+            loop:false,
+            margin:10,
+            dots: false,
+            nav:true,
+            navText: ["<img src='img/prev-gray.png'>","<img src='img/next-gray.png'>"],
+        });
+    });
+</script>
 </html>
